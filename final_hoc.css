@@ -769,6 +769,7 @@ div.mt-2 { margin-top: 24px !important }
 .co-warning-box {
     border-color: rgba(255, 216, 74, 0.4) !important;
     box-shadow: 0 0 12px rgba(255, 216, 74, 0.15), 0 4px 20px rgba(255, 216, 74, 0.05) !important;
+    .co-warning-box p { font-size: 0.82em !important; line-height: 1.55 !important }; 
     animation: co-fadeUp .6s ease both, co-warningGlow 4s ease-in-out infinite !important
 }
 .co-warning-label { color: #ffd84a !important }
