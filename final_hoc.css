@@ -767,9 +767,11 @@ div.mt-2 { margin-top: 24px !important }
 
 /* ═══ WARNING BOX — yellow glow ═══ */
 .co-warning-box {
+    flex: 1.8 !important;
     border-color: rgba(255, 216, 74, 0.4) !important;
     box-shadow: 0 0 12px rgba(255, 216, 74, 0.15), 0 4px 20px rgba(255, 216, 74, 0.05) !important;
-    animation: co-fadeUp .6s ease both, co-warningGlow 4s ease-in-out infinite !important
+    animation: co-fadeUp .6s ease both, co-warningGlow 4s ease-in-out infinite !important;
+    flex: none !important; clip-path: none !important; overflow: visible !important
 }
 .co-warning-label { color: #ffd84a !important }
 .co-warning-label::before {
