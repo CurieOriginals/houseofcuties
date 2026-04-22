@@ -94,7 +94,7 @@ div.mt-4 { background: transparent !important; background-color: transparent !im
         position: relative !important; min-height: 340px !important;
         padding: 0 16px 0 !important; margin-bottom: 80px !important;
         border-radius: var(--co-radius) !important;
-        background: url('https://curie-assets.site/images/Hoc_header.webp') center 40% / cover no-repeat !important;
+        background: url('https://curie-assets.site/images/HoC_header.webp') center 40% / cover no-repeat !important;
         box-sizing: border-box !important;
         border-style: solid !important; border-width: 2px !important;
         border-color: var(--co-border-idle);
@@ -143,7 +143,7 @@ div.mt-4 { background: transparent !important; background-color: transparent !im
         row-gap: 4px !important; position: relative !important; min-height: 200px !important;
         padding: 0 14px 0 !important; margin-bottom: 72px !important;
         border-radius: var(--co-radius) !important;
-        background: url('https://curie-assets.site/images/Hoc_header.webp') center 40% / cover no-repeat !important;
+        background: url('https://curie-assets.site/images/HoC_header.webp') center 40% / cover no-repeat !important;
         border-style: solid !important; border-width: 2px !important;
         border-color: var(--co-border-idle);
         animation: co-borderShift 12s ease-in-out infinite !important
@@ -764,6 +764,27 @@ div.mt-2 { margin-top: 24px !important }
     box-shadow: 0 0 12px rgba(255, 107, 107, 0.25), 0 4px 20px rgba(255, 107, 107, 0.1)
 }
 .co-preset-inline span { position: relative; z-index: 1 }
+
+/* ═══ WARNING BOX — yellow glow ═══ */
+.co-warning-box {
+    border-color: rgba(255, 216, 74, 0.4) !important;
+    box-shadow: 0 0 12px rgba(255, 216, 74, 0.15), 0 4px 20px rgba(255, 216, 74, 0.05) !important;
+    animation: co-fadeUp .6s ease both, co-warningGlow 4s ease-in-out infinite !important
+}
+.co-warning-label { color: #ffd84a !important }
+.co-warning-label::before {
+    background: #ffd84a !important;
+    box-shadow: 0 0 8px rgba(255, 216, 74, 0.5) !important;
+    animation: co-warningPulse 2s ease-in-out infinite !important
+}
+@keyframes co-warningGlow {
+    0%, 100% { border-color: rgba(255, 216, 74, 0.3); box-shadow: 0 0 10px rgba(255, 216, 74, 0.1) }
+    50% { border-color: rgba(255, 216, 74, 0.5); box-shadow: 0 0 18px rgba(255, 216, 74, 0.2), 0 4px 24px rgba(255, 216, 74, 0.08) }
+}
+@keyframes co-warningPulse {
+    0%, 100% { box-shadow: 0 0 6px rgba(255, 216, 74, 0.4) }
+    50% { box-shadow: 0 0 12px rgba(255, 216, 74, 0.7) }
+}
 
 .co-feedback { animation: co-fadeUp .6s ease .35s both, co-borderShiftR 12s ease-in-out infinite !important }
 .co-right-stack .co-feedback { text-align: left }
